@@ -1,0 +1,1 @@
+global.window.hljsSmithy = require('./smithy.js');

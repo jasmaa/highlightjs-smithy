@@ -1,0 +1,20 @@
+{
+  "name": "highlightjs-smithy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/smithy.js",
+  "scripts": {
+    "build": "browserify src/standalone.js | uglifyjs > dist/hljs-smithy.min.js",
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "highlight.js": "^11.5.1"
+  },
+  "devDependencies": {
+    "browserify": "^17.0.0",
+    "jest": "^28.1.1",
+    "uglify-js": "^3.16.0"
+  }
+}
