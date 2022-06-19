@@ -1,0 +1,320 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Smithy syntax highlighting highlights syntax for basic/list.smithy 1`] = `
+"<span class=\\"hljs-keyword\\">namespace</span> <span class=\\"hljs-title\\">smithy.example</span>
+
+<span class=\\"hljs-keyword\\">list</span> <span class=\\"hljs-title\\">MyList</span> {
+    <span class=\\"hljs-attr\\">member</span>: <span class=\\"hljs-title\\">String</span>
+}
+
+@<span class=\\"hljs-meta\\">sparse</span>
+<span class=\\"hljs-keyword\\">list</span> <span class=\\"hljs-title\\">SparseList</span> {
+    <span class=\\"hljs-attr\\">member</span>: <span class=\\"hljs-title\\">String</span>
+}"
+`;
+
+exports[`Smithy syntax highlighting highlights syntax for basic/map.smithy 1`] = `
+"<span class=\\"hljs-keyword\\">namespace</span> <span class=\\"hljs-title\\">smithy.example</span>
+
+<span class=\\"hljs-keyword\\">map</span> <span class=\\"hljs-title\\">IntegerMap</span> {
+    <span class=\\"hljs-attr\\">key</span>: <span class=\\"hljs-title\\">String</span>,
+    <span class=\\"hljs-attr\\">value</span>: <span class=\\"hljs-title\\">Integer</span>
+}
+
+@<span class=\\"hljs-meta\\">sparse</span>
+<span class=\\"hljs-keyword\\">map</span> <span class=\\"hljs-title\\">SparseMap</span> {
+    <span class=\\"hljs-attr\\">key</span>: <span class=\\"hljs-title\\">String</span>,
+    <span class=\\"hljs-attr\\">value</span>: <span class=\\"hljs-title\\">String</span>
+}"
+`;
+
+exports[`Smithy syntax highlighting highlights syntax for basic/metadata-1.smithy 1`] = `
+"<span class=\\"hljs-title\\">$version</span>: <span class=\\"hljs-string\\">&quot;1.0&quot;</span>
+
+<span class=\\"hljs-keyword\\">metadata</span> <span class=\\"hljs-title\\">foo</span> = <span class=\\"hljs-string\\">&quot;bar&quot;</span>
+
+<span class=\\"hljs-keyword\\">namespace</span> <span class=\\"hljs-title\\">smithy.example</span>
+
+<span class=\\"hljs-keyword\\">use</span> <span class=\\"hljs-title\\">smithy.other.namespace#MyString</span>
+
+<span class=\\"hljs-keyword\\">structure</span> <span class=\\"hljs-title\\">MyStructure</span> {
+    @<span class=\\"hljs-meta\\">required</span>
+    <span class=\\"hljs-attr\\">foo</span>: <span class=\\"hljs-title\\">MyString</span>
+}"
+`;
+
+exports[`Smithy syntax highlighting highlights syntax for basic/metadata-2.smithy 1`] = `
+"<span class=\\"hljs-keyword\\">metadata</span> <span class=\\"hljs-string\\">&quot;foo&quot;</span> = [<span class=\\"hljs-string\\">&quot;baz&quot;</span>, <span class=\\"hljs-string\\">&quot;bar&quot;</span>]
+<span class=\\"hljs-keyword\\">metadata</span> <span class=\\"hljs-string\\">&quot;qux&quot;</span> = <span class=\\"hljs-string\\">&quot;test&quot;</span>
+<span class=\\"hljs-keyword\\">metadata</span> <span class=\\"hljs-string\\">&quot;validConflict&quot;</span> = <span class=\\"hljs-string\\">&quot;hi!&quot;</span>"
+`;
+
+exports[`Smithy syntax highlighting highlights syntax for basic/operation.smithy 1`] = `
+"<span class=\\"hljs-keyword\\">namespace</span> <span class=\\"hljs-title\\">smithy.example</span>
+
+<span class=\\"hljs-keyword\\">operation</span> <span class=\\"hljs-title\\">MyOperation</span> {
+    <span class=\\"hljs-attr\\">input</span>: <span class=\\"hljs-title\\">MyOperationInput</span>,
+    <span class=\\"hljs-attr\\">output</span>: <span class=\\"hljs-title\\">MyOperationOutput</span>,
+    <span class=\\"hljs-attr\\">errors</span>: [<span class=\\"hljs-title\\">NotFoundError</span>, <span class=\\"hljs-title\\">BadRequestError</span>]
+}
+
+@<span class=\\"hljs-meta\\">input</span>
+<span class=\\"hljs-keyword\\">structure</span> <span class=\\"hljs-title\\">MyOperationInput</span> {}
+
+@<span class=\\"hljs-meta\\">output</span>
+<span class=\\"hljs-keyword\\">structure</span> <span class=\\"hljs-title\\">MyOperationOutput</span> {}"
+`;
+
+exports[`Smithy syntax highlighting highlights syntax for basic/resource-1.smithy 1`] = `
+"<span class=\\"hljs-keyword\\">namespace</span> <span class=\\"hljs-title\\">smithy.example</span>
+
+<span class=\\"hljs-keyword\\">resource</span> <span class=\\"hljs-title\\">Forecast</span> {
+    <span class=\\"hljs-attr\\">identifiers</span>: {
+        <span class=\\"hljs-attr\\">forecastId</span>: <span class=\\"hljs-title\\">ForecastId</span>
+    }
+}
+
+<span class=\\"hljs-keyword\\">string</span> <span class=\\"hljs-title\\">ForecastId</span>"
+`;
+
+exports[`Smithy syntax highlighting highlights syntax for basic/resource-2.smithy 1`] = `
+"<span class=\\"hljs-keyword\\">resource</span> <span class=\\"hljs-title\\">ResourceA</span> {
+    <span class=\\"hljs-attr\\">identifiers</span>: {
+        <span class=\\"hljs-attr\\">a</span>: <span class=\\"hljs-title\\">String</span>
+    },
+    <span class=\\"hljs-attr\\">resources</span>: [<span class=\\"hljs-title\\">ResourceB</span>],
+}
+
+<span class=\\"hljs-keyword\\">resource</span> <span class=\\"hljs-title\\">ResourceB</span> {
+    <span class=\\"hljs-attr\\">identifiers</span>: {
+        <span class=\\"hljs-attr\\">a</span>: <span class=\\"hljs-title\\">String</span>,
+        <span class=\\"hljs-attr\\">b</span>: <span class=\\"hljs-title\\">String</span>,
+    },
+    <span class=\\"hljs-attr\\">resources</span>: [<span class=\\"hljs-title\\">ResourceC</span>],
+}
+
+<span class=\\"hljs-keyword\\">resource</span> <span class=\\"hljs-title\\">ResourceC</span> {
+    <span class=\\"hljs-attr\\">identifiers</span>: {
+        <span class=\\"hljs-attr\\">a</span>: <span class=\\"hljs-title\\">String</span>,
+        <span class=\\"hljs-attr\\">b</span>: <span class=\\"hljs-title\\">String</span>,
+        <span class=\\"hljs-attr\\">c</span>: <span class=\\"hljs-title\\">String</span>,
+    }
+}"
+`;
+
+exports[`Smithy syntax highlighting highlights syntax for basic/service.smithy 1`] = `
+"<span class=\\"hljs-keyword\\">namespace</span> <span class=\\"hljs-title\\">smithy.example</span>
+
+<span class=\\"hljs-keyword\\">service</span> <span class=\\"hljs-title\\">MyService</span> {
+    <span class=\\"hljs-attr\\">version</span>: &quot;<span class=\\"hljs-title\\">2017-02-11</span>&quot;
+}"
+`;
+
+exports[`Smithy syntax highlighting highlights syntax for basic/set.smithy 1`] = `
+"<span class=\\"hljs-keyword\\">namespace</span> <span class=\\"hljs-title\\">smithy.example</span>
+
+<span class=\\"hljs-keyword\\">set</span> <span class=\\"hljs-title\\">StringSet</span> {
+    <span class=\\"hljs-attr\\">member</span>: <span class=\\"hljs-title\\">String</span>
+}"
+`;
+
+exports[`Smithy syntax highlighting highlights syntax for basic/simple-shapes.smithy 1`] = `
+"<span class=\\"hljs-keyword\\">namespace</span> <span class=\\"hljs-title\\">smithy.example</span>
+
+<span class=\\"hljs-keyword\\">blob</span> <span class=\\"hljs-title\\">Blob</span>
+<span class=\\"hljs-keyword\\">boolean</span> <span class=\\"hljs-title\\">Boolean</span>
+<span class=\\"hljs-keyword\\">string</span> <span class=\\"hljs-title\\">String</span>
+<span class=\\"hljs-keyword\\">byte</span> <span class=\\"hljs-title\\">Byte</span>
+<span class=\\"hljs-keyword\\">short</span> <span class=\\"hljs-title\\">Short</span>
+<span class=\\"hljs-keyword\\">integer</span> <span class=\\"hljs-title\\">Integer</span>
+<span class=\\"hljs-keyword\\">long</span> <span class=\\"hljs-title\\">Long</span>
+<span class=\\"hljs-keyword\\">float</span> <span class=\\"hljs-title\\">Float</span>
+<span class=\\"hljs-keyword\\">double</span> <span class=\\"hljs-title\\">Double</span>
+<span class=\\"hljs-keyword\\">bigInteger</span> <span class=\\"hljs-title\\">BigInteger</span>
+<span class=\\"hljs-keyword\\">bigDecimal</span> <span class=\\"hljs-title\\">BigDecimal</span>
+<span class=\\"hljs-keyword\\">timestamp</span> <span class=\\"hljs-title\\">Timestamp</span>
+<span class=\\"hljs-keyword\\">document</span> <span class=\\"hljs-title\\">Document</span>"
+`;
+
+exports[`Smithy syntax highlighting highlights syntax for basic/structure.smithy 1`] = `
+"<span class=\\"hljs-keyword\\">namespace</span> <span class=\\"hljs-title\\">smithy.example</span>
+
+<span class=\\"hljs-keyword\\">structure</span> <span class=\\"hljs-title\\">MyStructure</span> {
+    <span class=\\"hljs-attr\\">foo</span>: <span class=\\"hljs-title\\">String</span>,
+
+    @<span class=\\"hljs-meta\\">required</span>
+    <span class=\\"hljs-attr\\">baz</span>: <span class=\\"hljs-title\\">Integer</span>,
+}"
+`;
+
+exports[`Smithy syntax highlighting highlights syntax for basic/trait.smithy 1`] = `
+"<span class=\\"hljs-keyword\\">namespace</span> <span class=\\"hljs-title\\">smithy.example</span>
+
+@<span class=\\"hljs-meta\\">length</span>(<span class=\\"hljs-attr\\">min</span>: <span class=\\"hljs-number\\">1</span>, <span class=\\"hljs-attr\\">max</span>: <span class=\\"hljs-number\\">100</span>)
+@<span class=\\"hljs-meta\\">documentation</span>(<span class=\\"hljs-string\\">&quot;Contains a string&quot;</span>)
+<span class=\\"hljs-keyword\\">string</span> <span class=\\"hljs-title\\">MyString</span>"
+`;
+
+exports[`Smithy syntax highlighting highlights syntax for basic/trait-apply.smithy 1`] = `
+"<span class=\\"hljs-keyword\\">namespace</span> <span class=\\"hljs-title\\">smithy.example</span>
+
+<span class=\\"hljs-keyword\\">apply</span> <span class=\\"hljs-title\\">MyString</span> @<span class=\\"hljs-meta\\">documentation</span>(<span class=\\"hljs-string\\">&quot;This is my string!&quot;</span>)
+<span class=\\"hljs-keyword\\">apply</span> <span class=\\"hljs-title\\">MyString</span> @<span class=\\"hljs-meta\\">length</span>(<span class=\\"hljs-attr\\">min</span>: <span class=\\"hljs-number\\">1</span>, <span class=\\"hljs-attr\\">max</span>: <span class=\\"hljs-number\\">10</span>)"
+`;
+
+exports[`Smithy syntax highlighting highlights syntax for basic/union.smithy 1`] = `
+"<span class=\\"hljs-keyword\\">namespace</span> <span class=\\"hljs-title\\">smithy.example</span>
+
+<span class=\\"hljs-keyword\\">union</span> <span class=\\"hljs-title\\">MyUnion</span> {
+    <span class=\\"hljs-attr\\">i32</span>: <span class=\\"hljs-title\\">Integer</span>,
+
+    @<span class=\\"hljs-meta\\">length</span>(<span class=\\"hljs-attr\\">min</span>: <span class=\\"hljs-title\\">1</span>, <span class=\\"hljs-attr\\">max</span>: <span class=\\"hljs-title\\">100</span>)
+    <span class=\\"hljs-attr\\">string</span>: <span class=\\"hljs-title\\">String</span>,
+
+    <span class=\\"hljs-attr\\">time</span>: <span class=\\"hljs-title\\">Timestamp</span>,
+}"
+`;
+
+exports[`Smithy syntax highlighting highlights syntax for complex/weather.smithy 1`] = `
+"<span class=\\"hljs-keyword\\">namespace</span> <span class=\\"hljs-title\\">example.weather</span>
+
+<span class=\\"hljs-comment\\">/// Provides weather forecasts.</span>
+@<span class=\\"hljs-meta\\">paginated</span>(<span class=\\"hljs-attr\\">inputToken</span>: <span class=\\"hljs-string\\">&quot;nextToken&quot;</span>, <span class=\\"hljs-attr\\">outputToken</span>: <span class=\\"hljs-string\\">&quot;nextToken&quot;</span>,
+           <span class=\\"hljs-attr\\">pageSize</span>: <span class=\\"hljs-string\\">&quot;pageSize&quot;</span>)
+<span class=\\"hljs-keyword\\">service</span> <span class=\\"hljs-title\\">Weather</span> {
+    <span class=\\"hljs-attr\\">version</span>: &quot;<span class=\\"hljs-title\\">2006-03-01</span>&quot;,
+    <span class=\\"hljs-attr\\">resources</span>: [<span class=\\"hljs-title\\">City</span>],
+    <span class=\\"hljs-attr\\">operations</span>: [<span class=\\"hljs-title\\">GetCurrentTime</span>]
+}
+
+<span class=\\"hljs-keyword\\">resource</span> <span class=\\"hljs-title\\">City</span> {
+    <span class=\\"hljs-attr\\">identifiers</span>: { <span class=\\"hljs-attr\\">cityId</span>: <span class=\\"hljs-title\\">CityId</span> },
+    <span class=\\"hljs-attr\\">read</span>: <span class=\\"hljs-title\\">GetCity</span>,
+    <span class=\\"hljs-attr\\">list</span>: <span class=\\"hljs-title\\">ListCities</span>,
+    <span class=\\"hljs-attr\\">resources</span>: [<span class=\\"hljs-title\\">Forecast</span>],
+}
+
+<span class=\\"hljs-keyword\\">resource</span> <span class=\\"hljs-title\\">Forecast</span> {
+    <span class=\\"hljs-attr\\">identifiers</span>: { <span class=\\"hljs-attr\\">cityId</span>: <span class=\\"hljs-title\\">CityId</span> },
+    <span class=\\"hljs-attr\\">read</span>: <span class=\\"hljs-title\\">GetForecast</span>,
+}
+
+<span class=\\"hljs-comment\\">// &quot;pattern&quot; is a trait.</span>
+@<span class=\\"hljs-meta\\">pattern</span>(<span class=\\"hljs-string\\">&quot;^[A-Za-z0-9 ]+$&quot;</span>)
+<span class=\\"hljs-keyword\\">string</span> <span class=\\"hljs-title\\">CityId</span>
+
+@<span class=\\"hljs-meta\\">readonly</span>
+<span class=\\"hljs-keyword\\">operation</span> <span class=\\"hljs-title\\">GetCity</span> {
+    <span class=\\"hljs-attr\\">input</span>: <span class=\\"hljs-title\\">GetCityInput</span>,
+    <span class=\\"hljs-attr\\">output</span>: <span class=\\"hljs-title\\">GetCityOutput</span>,
+    <span class=\\"hljs-attr\\">errors</span>: [<span class=\\"hljs-title\\">NoSuchResource</span>]
+}
+
+@<span class=\\"hljs-meta\\">input</span>
+<span class=\\"hljs-keyword\\">structure</span> <span class=\\"hljs-title\\">GetCityInput</span> {
+    <span class=\\"hljs-comment\\">// &quot;cityId&quot; provides the identifier for the resource and</span>
+    <span class=\\"hljs-comment\\">// has to be marked as required.</span>
+    @<span class=\\"hljs-meta\\">required</span>
+    <span class=\\"hljs-attr\\">cityId</span>: <span class=\\"hljs-title\\">CityId</span>
+}
+
+@<span class=\\"hljs-meta\\">output</span>
+<span class=\\"hljs-keyword\\">structure</span> <span class=\\"hljs-title\\">GetCityOutput</span> {
+    <span class=\\"hljs-comment\\">// &quot;required&quot; is used on output to indicate if the service</span>
+    <span class=\\"hljs-comment\\">// will always provide a value for the member.</span>
+    @<span class=\\"hljs-meta\\">required</span>
+    <span class=\\"hljs-attr\\">name</span>: <span class=\\"hljs-title\\">String</span>,
+
+    @<span class=\\"hljs-meta\\">required</span>
+    <span class=\\"hljs-attr\\">coordinates</span>: <span class=\\"hljs-title\\">CityCoordinates</span>,
+}
+
+<span class=\\"hljs-comment\\">// This structure is nested within GetCityOutput.</span>
+<span class=\\"hljs-keyword\\">structure</span> <span class=\\"hljs-title\\">CityCoordinates</span> {
+    @<span class=\\"hljs-meta\\">required</span>
+    <span class=\\"hljs-attr\\">latitude</span>: <span class=\\"hljs-title\\">Float</span>,
+
+    @<span class=\\"hljs-meta\\">required</span>
+    <span class=\\"hljs-attr\\">longitude</span>: <span class=\\"hljs-title\\">Float</span>,
+}
+
+<span class=\\"hljs-comment\\">// &quot;error&quot; is a trait that is used to specialize</span>
+<span class=\\"hljs-comment\\">// a structure as an error.</span>
+@<span class=\\"hljs-meta\\">error</span>(<span class=\\"hljs-string\\">&quot;client&quot;</span>)
+<span class=\\"hljs-keyword\\">structure</span> <span class=\\"hljs-title\\">NoSuchResource</span> {
+    @<span class=\\"hljs-meta\\">required</span>
+    <span class=\\"hljs-attr\\">resourceType</span>: <span class=\\"hljs-title\\">String</span>
+}
+
+<span class=\\"hljs-comment\\">// The paginated trait indicates that the operation may</span>
+<span class=\\"hljs-comment\\">// return truncated results.</span>
+@<span class=\\"hljs-meta\\">readonly</span>
+@<span class=\\"hljs-meta\\">paginated</span>(<span class=\\"hljs-attr\\">items</span>: <span class=\\"hljs-string\\">&quot;items&quot;</span>)
+<span class=\\"hljs-keyword\\">operation</span> <span class=\\"hljs-title\\">ListCities</span> {
+    <span class=\\"hljs-attr\\">input</span>: <span class=\\"hljs-title\\">ListCitiesInput</span>,
+    <span class=\\"hljs-attr\\">output</span>: <span class=\\"hljs-title\\">ListCitiesOutput</span>
+}
+
+@<span class=\\"hljs-meta\\">input</span>
+<span class=\\"hljs-keyword\\">structure</span> <span class=\\"hljs-title\\">ListCitiesInput</span> {
+    <span class=\\"hljs-attr\\">nextToken</span>: <span class=\\"hljs-title\\">String</span>,
+    <span class=\\"hljs-attr\\">pageSize</span>: <span class=\\"hljs-title\\">Integer</span>
+}
+
+@<span class=\\"hljs-meta\\">output</span>
+<span class=\\"hljs-keyword\\">structure</span> <span class=\\"hljs-title\\">ListCitiesOutput</span> {
+    <span class=\\"hljs-attr\\">nextToken</span>: <span class=\\"hljs-title\\">String</span>,
+
+    @<span class=\\"hljs-meta\\">required</span>
+    <span class=\\"hljs-attr\\">items</span>: <span class=\\"hljs-title\\">CitySummaries</span>,
+}
+
+<span class=\\"hljs-comment\\">// CitySummaries is a list of CitySummary structures.</span>
+<span class=\\"hljs-keyword\\">list</span> <span class=\\"hljs-title\\">CitySummaries</span> {
+    <span class=\\"hljs-attr\\">member</span>: <span class=\\"hljs-title\\">CitySummary</span>
+}
+
+<span class=\\"hljs-comment\\">// CitySummary contains a reference to a City.</span>
+@<span class=\\"hljs-meta\\">references</span>([{<span class=\\"hljs-attr\\">resource</span>: <span class=\\"hljs-title\\">City</span>}])
+<span class=\\"hljs-keyword\\">structure</span> <span class=\\"hljs-title\\">CitySummary</span> {
+    @<span class=\\"hljs-meta\\">required</span>
+    <span class=\\"hljs-attr\\">cityId</span>: <span class=\\"hljs-title\\">CityId</span>,
+
+    @<span class=\\"hljs-meta\\">required</span>
+    <span class=\\"hljs-attr\\">name</span>: <span class=\\"hljs-title\\">String</span>,
+}
+
+@<span class=\\"hljs-meta\\">readonly</span>
+<span class=\\"hljs-keyword\\">operation</span> <span class=\\"hljs-title\\">GetCurrentTime</span> {
+    <span class=\\"hljs-attr\\">input</span>: <span class=\\"hljs-title\\">GetCurrentTimeInput</span>,
+    <span class=\\"hljs-attr\\">output</span>: <span class=\\"hljs-title\\">GetCurrentTimeOutput</span>
+}
+
+@<span class=\\"hljs-meta\\">input</span>
+<span class=\\"hljs-keyword\\">structure</span> <span class=\\"hljs-title\\">GetCurrentTimeInput</span> {}
+
+@<span class=\\"hljs-meta\\">output</span>
+<span class=\\"hljs-keyword\\">structure</span> <span class=\\"hljs-title\\">GetCurrentTimeOutput</span> {
+    @<span class=\\"hljs-meta\\">required</span>
+    <span class=\\"hljs-attr\\">time</span>: <span class=\\"hljs-title\\">Timestamp</span>
+}
+
+@<span class=\\"hljs-meta\\">readonly</span>
+<span class=\\"hljs-keyword\\">operation</span> <span class=\\"hljs-title\\">GetForecast</span> {
+    <span class=\\"hljs-attr\\">input</span>: <span class=\\"hljs-title\\">GetForecastInput</span>,
+    <span class=\\"hljs-attr\\">output</span>: <span class=\\"hljs-title\\">GetForecastOutput</span>
+}
+
+<span class=\\"hljs-comment\\">// &quot;cityId&quot; provides the only identifier for the resource since</span>
+<span class=\\"hljs-comment\\">// a Forecast doesn&#x27;t have its own.</span>
+@<span class=\\"hljs-meta\\">input</span>
+<span class=\\"hljs-keyword\\">structure</span> <span class=\\"hljs-title\\">GetForecastInput</span> {
+    @<span class=\\"hljs-meta\\">required</span>
+    <span class=\\"hljs-attr\\">cityId</span>: <span class=\\"hljs-title\\">CityId</span>,
+}
+
+@<span class=\\"hljs-meta\\">output</span>
+<span class=\\"hljs-keyword\\">structure</span> <span class=\\"hljs-title\\">GetForecastOutput</span> {
+    <span class=\\"hljs-attr\\">chanceOfRain</span>: <span class=\\"hljs-title\\">Float</span>
+}"
+`;

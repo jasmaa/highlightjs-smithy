@@ -57,7 +57,7 @@ module.exports = function (hljs) {
   };
 
   const STATEMENT = {
-    match: /namespace|use|apply/,
+    match: /namespace|use|apply|metadata/,
     scope: 'keyword',
   };
 
@@ -86,23 +86,6 @@ module.exports = function (hljs) {
     scope: {
       2: 'meta',
     },
-  };
-
-  const METADATA = {
-    begin: [
-      /metadata/,
-      IDENTIFIER_RE,
-      /\s+/,
-      /=/,
-      /\s+/,
-      /{/,
-    ],
-    beginScope: {
-      1: 'keyword',
-      3: 'title',
-    },
-    end: /}/,
-    contains: NODE_CONTENTS,
   };
 
   const SIMPLE_SHAPE = {
@@ -139,11 +122,13 @@ module.exports = function (hljs) {
     contains:
       [
         STATEMENT,
-        METADATA,
         AGGREGATE_SHAPE,
         SIMPLE_SHAPE,
         TRAIT_WITH_ARGS,
         TRAIT,
+        hljs.QUOTE_STRING_MODE,
+        OBJECT_NODE,
+        ARRAY_NODE,
         hljs.C_BLOCK_COMMENT_MODE,
         hljs.C_LINE_COMMENT_MODE,
         IDENTIFIER,
