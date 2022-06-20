@@ -41,19 +41,26 @@ module.exports = function (hljs) {
     hljs.NUMBER_MODE,
     MULTILINE_STRING,
     hljs.QUOTE_STRING_MODE,
+    hljs.C_LINE_COMMENT_MODE,
     IDENTIFIER,
   ];
 
   const ARRAY_NODE = {
     begin: /\[/,
     end: /\]/,
-    contains: NODE_CONTENTS,
+    contains: [
+      ...NODE_CONTENTS,
+      'self',
+    ],
   };
 
   const OBJECT_NODE = {
     begin: /{/,
     end: /}/,
-    contains: NODE_CONTENTS,
+    contains: [
+      ...NODE_CONTENTS,
+      'self',
+    ],
   };
 
   const STATEMENT = {
@@ -107,10 +114,9 @@ module.exports = function (hljs) {
     },
     end: /}/,
     contains: [
-      hljs.C_BLOCK_COMMENT_MODE,
       hljs.C_LINE_COMMENT_MODE,
-      TRAIT,
       TRAIT_WITH_ARGS,
+      TRAIT,
       OBJECT_NODE,
       ARRAY_NODE,
       ATTRIBUTE,
@@ -129,7 +135,6 @@ module.exports = function (hljs) {
         hljs.QUOTE_STRING_MODE,
         OBJECT_NODE,
         ARRAY_NODE,
-        hljs.C_BLOCK_COMMENT_MODE,
         hljs.C_LINE_COMMENT_MODE,
         IDENTIFIER,
       ]

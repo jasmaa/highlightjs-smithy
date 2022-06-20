@@ -49,6 +49,28 @@ exports[`Smithy syntax highlighting highlights syntax for basic/metadata-2.smith
 <span class=\\"hljs-keyword\\">metadata</span> <span class=\\"hljs-string\\">&quot;validConflict&quot;</span> = <span class=\\"hljs-string\\">&quot;hi!&quot;</span>"
 `;
 
+exports[`Smithy syntax highlighting highlights syntax for basic/metadata-3.smithy 1`] = `
+"<span class=\\"hljs-comment\\">// comment 1</span>
+<span class=\\"hljs-keyword\\">metadata</span> <span class=\\"hljs-title\\">Foo</span> = {
+  <span class=\\"hljs-comment\\">// comment 2</span>
+  <span class=\\"hljs-attr\\">bar1</span>: <span class=\\"hljs-title\\">Bar</span>,
+  <span class=\\"hljs-attr\\">bar2</span>: {
+    <span class=\\"hljs-attr\\">key1</span>: <span class=\\"hljs-string\\">&quot;key1&quot;</span>,
+    <span class=\\"hljs-attr\\">key2</span>: <span class=\\"hljs-number\\">80</span>,
+    <span class=\\"hljs-attr\\">key3</span>: [<span class=\\"hljs-number\\">1</span>, <span class=\\"hljs-number\\">2</span>, <span class=\\"hljs-string\\">&quot;three&quot;</span>],
+  },
+  <span class=\\"hljs-attr\\">bar3</span>: [
+    <span class=\\"hljs-number\\">1</span>,
+    <span class=\\"hljs-string\\">&quot;two&quot;</span>,
+    {
+      <span class=\\"hljs-attr\\">key1</span>: <span class=\\"hljs-string\\">&quot;key1&quot;</span>, <span class=\\"hljs-comment\\">// comment 3</span>
+      <span class=\\"hljs-attr\\">key2</span>: <span class=\\"hljs-number\\">80</span>,
+      <span class=\\"hljs-attr\\">key3</span>: [<span class=\\"hljs-number\\">1</span>, <span class=\\"hljs-number\\">2</span>, <span class=\\"hljs-string\\">&quot;three&quot;</span>],
+    }
+  ]
+}"
+`;
+
 exports[`Smithy syntax highlighting highlights syntax for basic/operation.smithy 1`] = `
 "<span class=\\"hljs-keyword\\">namespace</span> <span class=\\"hljs-title\\">smithy.example</span>
 
@@ -136,7 +158,7 @@ exports[`Smithy syntax highlighting highlights syntax for basic/simple-shapes.sm
 <span class=\\"hljs-keyword\\">document</span> <span class=\\"hljs-title\\">Document</span>"
 `;
 
-exports[`Smithy syntax highlighting highlights syntax for basic/structure.smithy 1`] = `
+exports[`Smithy syntax highlighting highlights syntax for basic/structure-1.smithy 1`] = `
 "<span class=\\"hljs-keyword\\">namespace</span> <span class=\\"hljs-title\\">smithy.example</span>
 
 <span class=\\"hljs-keyword\\">structure</span> <span class=\\"hljs-title\\">MyStructure</span> {
@@ -145,6 +167,20 @@ exports[`Smithy syntax highlighting highlights syntax for basic/structure.smithy
     @<span class=\\"hljs-meta\\">required</span>
     <span class=\\"hljs-attr\\">baz</span>: <span class=\\"hljs-title\\">Integer</span>,
 }"
+`;
+
+exports[`Smithy syntax highlighting highlights syntax for basic/structure-2.smithy 1`] = `
+"<span class=\\"hljs-keyword\\">structure</span> <span class=\\"hljs-title\\">Foo</span> {
+    @<span class=\\"hljs-meta\\">documentation</span>(<span class=\\"hljs-string\\">&quot;Member documentation&quot;</span>)
+    <span class=\\"hljs-attr\\">baz</span>: <span class=\\"hljs-title\\">Baz</span>,
+
+    <span class=\\"hljs-attr\\">bar</span>: <span class=\\"hljs-title\\">Baz</span>,
+
+    <span class=\\"hljs-attr\\">qux</span>: <span class=\\"hljs-title\\">String</span>,
+}
+
+@<span class=\\"hljs-meta\\">documentation</span>(<span class=\\"hljs-string\\">&quot;Shape documentation&quot;</span>)
+<span class=\\"hljs-keyword\\">string</span> <span class=\\"hljs-title\\">Baz</span>"
 `;
 
 exports[`Smithy syntax highlighting highlights syntax for basic/trait.smithy 1`] = `
@@ -168,7 +204,7 @@ exports[`Smithy syntax highlighting highlights syntax for basic/union.smithy 1`]
 <span class=\\"hljs-keyword\\">union</span> <span class=\\"hljs-title\\">MyUnion</span> {
     <span class=\\"hljs-attr\\">i32</span>: <span class=\\"hljs-title\\">Integer</span>,
 
-    @<span class=\\"hljs-meta\\">length</span>(<span class=\\"hljs-attr\\">min</span>: <span class=\\"hljs-title\\">1</span>, <span class=\\"hljs-attr\\">max</span>: <span class=\\"hljs-title\\">100</span>)
+    @<span class=\\"hljs-meta\\">length</span>(<span class=\\"hljs-attr\\">min</span>: <span class=\\"hljs-number\\">1</span>, <span class=\\"hljs-attr\\">max</span>: <span class=\\"hljs-number\\">100</span>)
     <span class=\\"hljs-attr\\">string</span>: <span class=\\"hljs-title\\">String</span>,
 
     <span class=\\"hljs-attr\\">time</span>: <span class=\\"hljs-title\\">Timestamp</span>,
