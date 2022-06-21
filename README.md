@@ -2,7 +2,7 @@
 
 Highlight.js syntax for Smithy
 
-## Usage
+## Use in browser
 
 Build `hljs-smithy.min.js` with:
 
@@ -26,4 +26,42 @@ Include in HTML page:
   hljs.registerLanguage('smithy', hljsSmithy);
   hljs.highlightAll();
 </script>
+```
+
+## Use in Node
+
+Install packages:
+
+```
+npm install highlight.js
+npm install highlightjs-smithy
+```
+
+Import modules in Node:
+
+```js
+const hljs = require('highlight.js');
+const hljsSmithy = require('highlightjs-smithy');
+
+const code = `
+namespace example.weather
+
+service Weather {
+    version: "2006-03-01",
+    resources: [City],
+    operations: [GetCurrentTime]
+}
+
+resource City {
+    identifiers: { cityId: CityId },
+    read: GetCity,
+    list: ListCities,
+    resources: [Forecast],
+}
+`;
+
+hljs.registerLanguage('smithy', hljsSmithy);
+const result = hljs.highlight(code, {
+  language: 'smithy',
+});
 ```
