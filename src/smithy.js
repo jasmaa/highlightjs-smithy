@@ -105,7 +105,7 @@ module.exports = function (hljs) {
       /|list|set|map|union|structure|service|resource|operation/,
       /\s+/,
       IDENTIFIER_RE,
-      /\s+/,
+      /\s*/,
       /{/,
     ],
     beginScope: {

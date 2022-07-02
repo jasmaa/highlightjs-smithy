@@ -183,6 +183,27 @@ exports[`Smithy syntax highlighting highlights syntax for basic/structure-2.smit
 <span class=\\"hljs-keyword\\">string</span> <span class=\\"hljs-title\\">Baz</span>"
 `;
 
+exports[`Smithy syntax highlighting highlights syntax for basic/structure-spacing.smithy 1`] = `
+"<span class=\\"hljs-keyword\\">structure</span> <span class=\\"hljs-title\\">Foo</span>{@<span class=\\"hljs-meta\\">required</span> <span class=\\"hljs-attr\\">baz</span>:<span class=\\"hljs-title\\">Baz</span>,<span class=\\"hljs-attr\\">bar</span>:<span class=\\"hljs-title\\">Baz</span>,<span class=\\"hljs-attr\\">qux</span>:<span class=\\"hljs-title\\">String</span>}
+
+
+
+<span class=\\"hljs-keyword\\">structure</span> <span class=\\"hljs-title\\">Foo</span>
+
+
+{
+  
+  @<span class=\\"hljs-meta\\">required</span>
+<span class=\\"hljs-attr\\">baz</span>: <span class=\\"hljs-title\\">Baz</span>,
+  
+  
+          <span class=\\"hljs-attr\\">bar</span>: <span class=\\"hljs-title\\">Baz</span>,
+<span class=\\"hljs-attr\\">qux</span>: <span class=\\"hljs-title\\">String</span>,
+
+
+            }"
+`;
+
 exports[`Smithy syntax highlighting highlights syntax for basic/trait.smithy 1`] = `
 "<span class=\\"hljs-keyword\\">namespace</span> <span class=\\"hljs-title\\">smithy.example</span>
 

@@ -17,6 +17,7 @@ const filePaths = [
     'basic/simple-shapes.smithy',
     'basic/structure-1.smithy',
     'basic/structure-2.smithy',
+    'basic/structure-spacing.smithy',
     'basic/trait-apply.smithy',
     'basic/trait.smithy',
     'basic/union.smithy',
