@@ -1,10 +1,15 @@
 # highlightjs-smithy
 
+[![npm version](https://img.shields.io/npm/v/highlightjs-smithy)](https://www.npmjs.com/highlightjs-smithy)
+[![npm downloads](https://img.shields.io/npm/dt/highlightjs-smithy)](https://www.npmjs.com/package/highlightjs-smithy)
+
 Highlight.js syntax for Smithy
 
 ## Use in browser
 
-Build `hljs-smithy.min.js` with:
+Get `hljs-smithy.min.js` from [latest
+release](https://github.com/jasmaa/highlightjs-smithy/releases) or build
+`hljs-smithy.min.js` with:
 
 ```
 yarn build
