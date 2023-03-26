@@ -1,5 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Smithy syntax highlighting highlights syntax for basic/elision-attribute.smithy 1`] = `
+"<span class=\\"hljs-keyword\\">namespace</span> <span class=\\"hljs-title\\">smithy.example</span>
+
+<span class=\\"hljs-keyword\\">$</span><span class=\\"hljs-attr\\">version</span>: <span class=\\"hljs-string\\">&quot;1.0&quot;</span>
+
+<span class=\\"hljs-keyword\\">structure</span> <span class=\\"hljs-title\\">Foo</span> {
+    <span class=\\"hljs-keyword\\">$</span><span class=\\"hljs-attr\\">bar</span>,
+    <span class=\\"hljs-attr\\">baz</span>: <span class=\\"hljs-title\\">String</span>,
+}"
+`;
+
 exports[`Smithy syntax highlighting highlights syntax for basic/list.smithy 1`] = `
 "<span class=\\"hljs-keyword\\">namespace</span> <span class=\\"hljs-title\\">smithy.example</span>
 
@@ -29,7 +40,7 @@ exports[`Smithy syntax highlighting highlights syntax for basic/map.smithy 1`] =
 `;
 
 exports[`Smithy syntax highlighting highlights syntax for basic/metadata-1.smithy 1`] = `
-"<span class=\\"hljs-title\\">$version</span>: <span class=\\"hljs-string\\">&quot;1.0&quot;</span>
+"<span class=\\"hljs-keyword\\">$</span><span class=\\"hljs-attr\\">version</span>: <span class=\\"hljs-string\\">&quot;1.0&quot;</span>
 
 <span class=\\"hljs-keyword\\">metadata</span> <span class=\\"hljs-title\\">foo</span> = <span class=\\"hljs-string\\">&quot;bar&quot;</span>
 

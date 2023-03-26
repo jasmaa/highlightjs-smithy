@@ -4,6 +4,7 @@ const hljs = require('highlight.js');
 const hljsSmithy = require('../src/smithy.js');
 
 const filePaths = [
+    'basic/elision-attribute.smithy',
     'basic/list.smithy',
     'basic/map.smithy',
     'basic/metadata-1.smithy',

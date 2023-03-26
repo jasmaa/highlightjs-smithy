@@ -13,7 +13,7 @@ module.exports = function (hljs) {
     contains: [hljs.BACKSLASH_ESCAPE]
   };
 
-  const IDENTIFIER_RE = /[\$\w-]+([\.\#][\$\w-]+)*/;
+  const IDENTIFIER_RE = /[\w-]+([\.\#][\w-]+)*/;
 
   const ATTRIBUTE = {
     match: [
@@ -22,6 +22,17 @@ module.exports = function (hljs) {
     ],
     scope: {
       1: 'attr',
+    },
+  };
+
+  const ELISION_ATTRIBUTE = {
+    match: [
+      /\$/,
+      IDENTIFIER_RE,
+    ],
+    scope: {
+      1: 'keyword',
+      2: 'attr',
     },
   };
 
@@ -37,6 +48,7 @@ module.exports = function (hljs) {
 
   const NODE_CONTENTS = [
     ATTRIBUTE,
+    ELISION_ATTRIBUTE,
     LITERAL,
     hljs.NUMBER_MODE,
     MULTILINE_STRING,
@@ -120,6 +132,7 @@ module.exports = function (hljs) {
       OBJECT_NODE,
       ARRAY_NODE,
       ATTRIBUTE,
+      ELISION_ATTRIBUTE,
       IDENTIFIER,
     ]
   };
@@ -137,6 +150,7 @@ module.exports = function (hljs) {
         ARRAY_NODE,
         hljs.C_LINE_COMMENT_MODE,
         IDENTIFIER,
+        ELISION_ATTRIBUTE,
       ]
   }
 }
