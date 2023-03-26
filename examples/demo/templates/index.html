@@ -1,0 +1,20 @@
+<html>
+
+<body>
+  <h1>Example higlightjs-smithy</h1>
+  <pre>
+    <code class="language-smithy">
+{{ code }}
+    </code>
+  </pre>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+  <script src="./hljs-smithy.min.js"></script>
+  <script>
+    hljs.registerLanguage('smithy', hljsSmithy);
+    hljs.highlightAll();
+  </script>
+</body>
+
+</html>

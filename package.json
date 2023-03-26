@@ -9,10 +9,8 @@
   },
   "author": "jasmaa",
   "license": "MIT",
-  "dependencies": {
-    "highlight.js": "^11.5.1"
-  },
   "devDependencies": {
+    "highlight.js": "^11.5.1",
     "jest": "^28.1.1",
     "uglifyjs-webpack-plugin": "^2.2.0",
     "webpack": "^5.73.0",
