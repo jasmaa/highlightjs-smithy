@@ -46,10 +46,21 @@ module.exports = function (hljs) {
     scope: 'literal'
   };
 
+  const TRAIT = {
+    match: [
+      /@/,
+      /\w+/,
+    ],
+    scope: {
+      2: 'meta',
+    },
+  };
+
   const NODE_CONTENTS = [
     ATTRIBUTE,
     ELISION_ATTRIBUTE,
     LITERAL,
+    TRAIT,
     hljs.NUMBER_MODE,
     MULTILINE_STRING,
     hljs.QUOTE_STRING_MODE,
@@ -75,76 +86,69 @@ module.exports = function (hljs) {
     ],
   };
 
-  const STATEMENT = {
-    match: /namespace|use|apply|metadata/,
-    scope: 'keyword',
-  };
-
-  const TRAIT_WITH_ARGS = {
-    begin: [
-      /@/,
-      /\w+/,
-      /\(/,
-    ],
-    beginScope: {
-      2: 'meta',
-    },
+  const PARENS_NODE = {
+    begin: /\(/,
     end: /\)/,
     contains: [
       OBJECT_NODE,
       ARRAY_NODE,
       ...NODE_CONTENTS,
+      'self',
     ]
   };
 
-  const TRAIT = {
+  const STATEMENT = {
+    match: /metadata/,
+    scope: 'keyword',
+  };
+
+  const NAMESPACE = {
     match: [
-      /@/,
-      /\w+/,
+      /namespace/,
+      /\s+/,
+      IDENTIFIER_RE,
     ],
     scope: {
-      2: 'meta',
+      1: 'keyword',
+      3: 'attr',
     },
   };
 
   const SIMPLE_SHAPE = {
-    match: /blob|boolean|string|byte|short|integer|long|float|double|bigInteger|bigDecimal|timestamp|document/,
-    scope: 'keyword',
-  };
-
-  const AGGREGATE_SHAPE = {
-    begin: [
-      /|list|set|map|union|structure|service|resource|operation/,
+    match: [
+      /blob|boolean|string|byte|short|integer|long|float|double|bigInteger|bigDecimal|timestamp|document/,
       /\s+/,
       IDENTIFIER_RE,
-      /\s*/,
-      /{/,
     ],
-    beginScope: {
+    scope: {
       1: 'keyword',
       3: 'title',
     },
-    end: /}/,
-    contains: [
-      hljs.C_LINE_COMMENT_MODE,
-      TRAIT_WITH_ARGS,
-      TRAIT,
-      OBJECT_NODE,
-      ARRAY_NODE,
-      ATTRIBUTE,
-      ELISION_ATTRIBUTE,
-      IDENTIFIER,
-    ]
+  };
+
+  const AGGREGATE_SHAPE = {
+    match: [
+      /use|apply|list|set|map|union|structure|service|resource|operation/,
+      /\s+/,
+      IDENTIFIER_RE,
+    ],
+    scope: {
+      1: 'keyword',
+      3: 'title',
+    },
   };
 
   return {
     contains:
       [
+        NAMESPACE,
         STATEMENT,
         AGGREGATE_SHAPE,
         SIMPLE_SHAPE,
-        TRAIT_WITH_ARGS,
         TRAIT,
+        OBJECT_NODE,
+        ARRAY_NODE,
+        PARENS_NODE,
         hljs.QUOTE_STRING_MODE,
         OBJECT_NODE,
         ARRAY_NODE,

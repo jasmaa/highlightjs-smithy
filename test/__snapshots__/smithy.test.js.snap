@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Smithy syntax highlighting highlights syntax for basic/elision-attribute.smithy 1`] = `
-"<span class=\\"hljs-keyword\\">namespace</span> <span class=\\"hljs-title\\">smithy.example</span>
+"<span class=\\"hljs-keyword\\">namespace</span> <span class=\\"hljs-attr\\">smithy.example</span>
 
 <span class=\\"hljs-keyword\\">$</span><span class=\\"hljs-attr\\">version</span>: <span class=\\"hljs-string\\">&quot;1.0&quot;</span>
 
@@ -12,7 +12,7 @@ exports[`Smithy syntax highlighting highlights syntax for basic/elision-attribut
 `;
 
 exports[`Smithy syntax highlighting highlights syntax for basic/list.smithy 1`] = `
-"<span class=\\"hljs-keyword\\">namespace</span> <span class=\\"hljs-title\\">smithy.example</span>
+"<span class=\\"hljs-keyword\\">namespace</span> <span class=\\"hljs-attr\\">smithy.example</span>
 
 <span class=\\"hljs-keyword\\">list</span> <span class=\\"hljs-title\\">MyList</span> {
     <span class=\\"hljs-attr\\">member</span>: <span class=\\"hljs-title\\">String</span>
@@ -25,7 +25,7 @@ exports[`Smithy syntax highlighting highlights syntax for basic/list.smithy 1`] 
 `;
 
 exports[`Smithy syntax highlighting highlights syntax for basic/map.smithy 1`] = `
-"<span class=\\"hljs-keyword\\">namespace</span> <span class=\\"hljs-title\\">smithy.example</span>
+"<span class=\\"hljs-keyword\\">namespace</span> <span class=\\"hljs-attr\\">smithy.example</span>
 
 <span class=\\"hljs-keyword\\">map</span> <span class=\\"hljs-title\\">IntegerMap</span> {
     <span class=\\"hljs-attr\\">key</span>: <span class=\\"hljs-title\\">String</span>,
@@ -44,7 +44,7 @@ exports[`Smithy syntax highlighting highlights syntax for basic/metadata-1.smith
 
 <span class=\\"hljs-keyword\\">metadata</span> <span class=\\"hljs-title\\">foo</span> = <span class=\\"hljs-string\\">&quot;bar&quot;</span>
 
-<span class=\\"hljs-keyword\\">namespace</span> <span class=\\"hljs-title\\">smithy.example</span>
+<span class=\\"hljs-keyword\\">namespace</span> <span class=\\"hljs-attr\\">smithy.example</span>
 
 <span class=\\"hljs-keyword\\">use</span> <span class=\\"hljs-title\\">smithy.other.namespace#MyString</span>
 
@@ -83,7 +83,7 @@ exports[`Smithy syntax highlighting highlights syntax for basic/metadata-3.smith
 `;
 
 exports[`Smithy syntax highlighting highlights syntax for basic/operation.smithy 1`] = `
-"<span class=\\"hljs-keyword\\">namespace</span> <span class=\\"hljs-title\\">smithy.example</span>
+"<span class=\\"hljs-keyword\\">namespace</span> <span class=\\"hljs-attr\\">smithy.example</span>
 
 <span class=\\"hljs-keyword\\">operation</span> <span class=\\"hljs-title\\">MyOperation</span> {
     <span class=\\"hljs-attr\\">input</span>: <span class=\\"hljs-title\\">MyOperationInput</span>,
@@ -99,7 +99,7 @@ exports[`Smithy syntax highlighting highlights syntax for basic/operation.smithy
 `;
 
 exports[`Smithy syntax highlighting highlights syntax for basic/resource-1.smithy 1`] = `
-"<span class=\\"hljs-keyword\\">namespace</span> <span class=\\"hljs-title\\">smithy.example</span>
+"<span class=\\"hljs-keyword\\">namespace</span> <span class=\\"hljs-attr\\">smithy.example</span>
 
 <span class=\\"hljs-keyword\\">resource</span> <span class=\\"hljs-title\\">Forecast</span> {
     <span class=\\"hljs-attr\\">identifiers</span>: {
@@ -136,15 +136,15 @@ exports[`Smithy syntax highlighting highlights syntax for basic/resource-2.smith
 `;
 
 exports[`Smithy syntax highlighting highlights syntax for basic/service.smithy 1`] = `
-"<span class=\\"hljs-keyword\\">namespace</span> <span class=\\"hljs-title\\">smithy.example</span>
+"<span class=\\"hljs-keyword\\">namespace</span> <span class=\\"hljs-attr\\">smithy.example</span>
 
 <span class=\\"hljs-keyword\\">service</span> <span class=\\"hljs-title\\">MyService</span> {
-    <span class=\\"hljs-attr\\">version</span>: &quot;<span class=\\"hljs-title\\">2017-02-11</span>&quot;
+    <span class=\\"hljs-attr\\">version</span>: <span class=\\"hljs-string\\">&quot;2017-02-11&quot;</span>
 }"
 `;
 
 exports[`Smithy syntax highlighting highlights syntax for basic/set.smithy 1`] = `
-"<span class=\\"hljs-keyword\\">namespace</span> <span class=\\"hljs-title\\">smithy.example</span>
+"<span class=\\"hljs-keyword\\">namespace</span> <span class=\\"hljs-attr\\">smithy.example</span>
 
 <span class=\\"hljs-keyword\\">set</span> <span class=\\"hljs-title\\">StringSet</span> {
     <span class=\\"hljs-attr\\">member</span>: <span class=\\"hljs-title\\">String</span>
@@ -152,7 +152,7 @@ exports[`Smithy syntax highlighting highlights syntax for basic/set.smithy 1`] =
 `;
 
 exports[`Smithy syntax highlighting highlights syntax for basic/simple-shapes.smithy 1`] = `
-"<span class=\\"hljs-keyword\\">namespace</span> <span class=\\"hljs-title\\">smithy.example</span>
+"<span class=\\"hljs-keyword\\">namespace</span> <span class=\\"hljs-attr\\">smithy.example</span>
 
 <span class=\\"hljs-keyword\\">blob</span> <span class=\\"hljs-title\\">Blob</span>
 <span class=\\"hljs-keyword\\">boolean</span> <span class=\\"hljs-title\\">Boolean</span>
@@ -170,7 +170,7 @@ exports[`Smithy syntax highlighting highlights syntax for basic/simple-shapes.sm
 `;
 
 exports[`Smithy syntax highlighting highlights syntax for basic/structure-1.smithy 1`] = `
-"<span class=\\"hljs-keyword\\">namespace</span> <span class=\\"hljs-title\\">smithy.example</span>
+"<span class=\\"hljs-keyword\\">namespace</span> <span class=\\"hljs-attr\\">smithy.example</span>
 
 <span class=\\"hljs-keyword\\">structure</span> <span class=\\"hljs-title\\">MyStructure</span> {
     <span class=\\"hljs-attr\\">foo</span>: <span class=\\"hljs-title\\">String</span>,
@@ -216,7 +216,7 @@ exports[`Smithy syntax highlighting highlights syntax for basic/structure-spacin
 `;
 
 exports[`Smithy syntax highlighting highlights syntax for basic/trait.smithy 1`] = `
-"<span class=\\"hljs-keyword\\">namespace</span> <span class=\\"hljs-title\\">smithy.example</span>
+"<span class=\\"hljs-keyword\\">namespace</span> <span class=\\"hljs-attr\\">smithy.example</span>
 
 @<span class=\\"hljs-meta\\">length</span>(<span class=\\"hljs-attr\\">min</span>: <span class=\\"hljs-number\\">1</span>, <span class=\\"hljs-attr\\">max</span>: <span class=\\"hljs-number\\">100</span>)
 @<span class=\\"hljs-meta\\">documentation</span>(<span class=\\"hljs-string\\">&quot;Contains a string&quot;</span>)
@@ -224,14 +224,14 @@ exports[`Smithy syntax highlighting highlights syntax for basic/trait.smithy 1`]
 `;
 
 exports[`Smithy syntax highlighting highlights syntax for basic/trait-apply.smithy 1`] = `
-"<span class=\\"hljs-keyword\\">namespace</span> <span class=\\"hljs-title\\">smithy.example</span>
+"<span class=\\"hljs-keyword\\">namespace</span> <span class=\\"hljs-attr\\">smithy.example</span>
 
 <span class=\\"hljs-keyword\\">apply</span> <span class=\\"hljs-title\\">MyString</span> @<span class=\\"hljs-meta\\">documentation</span>(<span class=\\"hljs-string\\">&quot;This is my string!&quot;</span>)
 <span class=\\"hljs-keyword\\">apply</span> <span class=\\"hljs-title\\">MyString</span> @<span class=\\"hljs-meta\\">length</span>(<span class=\\"hljs-attr\\">min</span>: <span class=\\"hljs-number\\">1</span>, <span class=\\"hljs-attr\\">max</span>: <span class=\\"hljs-number\\">10</span>)"
 `;
 
 exports[`Smithy syntax highlighting highlights syntax for basic/union.smithy 1`] = `
-"<span class=\\"hljs-keyword\\">namespace</span> <span class=\\"hljs-title\\">smithy.example</span>
+"<span class=\\"hljs-keyword\\">namespace</span> <span class=\\"hljs-attr\\">smithy.example</span>
 
 <span class=\\"hljs-keyword\\">union</span> <span class=\\"hljs-title\\">MyUnion</span> {
     <span class=\\"hljs-attr\\">i32</span>: <span class=\\"hljs-title\\">Integer</span>,
@@ -244,13 +244,13 @@ exports[`Smithy syntax highlighting highlights syntax for basic/union.smithy 1`]
 `;
 
 exports[`Smithy syntax highlighting highlights syntax for complex/weather.smithy 1`] = `
-"<span class=\\"hljs-keyword\\">namespace</span> <span class=\\"hljs-title\\">example.weather</span>
+"<span class=\\"hljs-keyword\\">namespace</span> <span class=\\"hljs-attr\\">example.weather</span>
 
 <span class=\\"hljs-comment\\">/// Provides weather forecasts.</span>
 @<span class=\\"hljs-meta\\">paginated</span>(<span class=\\"hljs-attr\\">inputToken</span>: <span class=\\"hljs-string\\">&quot;nextToken&quot;</span>, <span class=\\"hljs-attr\\">outputToken</span>: <span class=\\"hljs-string\\">&quot;nextToken&quot;</span>,
            <span class=\\"hljs-attr\\">pageSize</span>: <span class=\\"hljs-string\\">&quot;pageSize&quot;</span>)
 <span class=\\"hljs-keyword\\">service</span> <span class=\\"hljs-title\\">Weather</span> {
-    <span class=\\"hljs-attr\\">version</span>: &quot;<span class=\\"hljs-title\\">2006-03-01</span>&quot;,
+    <span class=\\"hljs-attr\\">version</span>: <span class=\\"hljs-string\\">&quot;2006-03-01&quot;</span>,
     <span class=\\"hljs-attr\\">resources</span>: [<span class=\\"hljs-title\\">City</span>],
     <span class=\\"hljs-attr\\">operations</span>: [<span class=\\"hljs-title\\">GetCurrentTime</span>]
 }
