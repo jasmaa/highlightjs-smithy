@@ -5,11 +5,13 @@ const hljsSmithy = require('../src/smithy.js');
 
 const filePaths = [
     'basic/elision-attribute.smithy',
+    'basic/for.smithy',
     'basic/list.smithy',
     'basic/map.smithy',
     'basic/metadata-1.smithy',
     'basic/metadata-2.smithy',
     'basic/metadata-3.smithy',
+    'basic/mixin.smithy',
     'basic/operation.smithy',
     'basic/resource-1.smithy',
     'basic/resource-2.smithy',

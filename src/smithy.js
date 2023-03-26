@@ -97,9 +97,16 @@ module.exports = function (hljs) {
     ]
   };
 
-  const STATEMENT = {
-    match: /metadata/,
-    scope: 'keyword',
+  const VERSION = {
+    match: [
+      /\$/,
+      /version/,
+      /:/,
+    ],
+    scope: {
+      1: 'keyword',
+      2: 'attr',
+    },
   };
 
   const NAMESPACE = {
@@ -138,14 +145,39 @@ module.exports = function (hljs) {
     },
   };
 
+  const FOR = {
+    match: [
+      /for/,
+      /\s+/,
+      IDENTIFIER_RE,
+    ],
+    scope: {
+      1: 'keyword',
+      3: 'title',
+    },
+  };
+
+  const WITH = {
+    match: /with/,
+    scope: 'keyword',
+  };
+
+  const METADATA = {
+    match: /metadata/,
+    scope: 'keyword',
+  };
+
   return {
     contains:
       [
+        VERSION,
         NAMESPACE,
-        STATEMENT,
         AGGREGATE_SHAPE,
         SIMPLE_SHAPE,
         TRAIT,
+        FOR,
+        WITH,
+        METADATA,
         OBJECT_NODE,
         ARRAY_NODE,
         PARENS_NODE,
@@ -154,7 +186,6 @@ module.exports = function (hljs) {
         ARRAY_NODE,
         hljs.C_LINE_COMMENT_MODE,
         IDENTIFIER,
-        ELISION_ATTRIBUTE,
       ]
   }
 }
