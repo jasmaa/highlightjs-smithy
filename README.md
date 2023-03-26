@@ -1,7 +1,7 @@
 # highlightjs-smithy
 
 [![npm version](https://img.shields.io/npm/v/highlightjs-smithy)](https://www.npmjs.com/highlightjs-smithy)
-[![npm downloads](https://img.shields.io/npm/dt/highlightjs-smithy)](https://www.npmjs.com/package/highlightjs-smithy)
+[![build](https://img.shields.io/github/actions/workflow/status/jasmaa/highlightjs-smithy/build.yml)](https://github.com/jasmaa/highlightjs-smithy/actions)
 
 Highlight.js syntax for Smithy
 
